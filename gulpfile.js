@@ -96,5 +96,5 @@ gulp.task('clean', function () {
   return del('build');
 });
 
-gulp.task('build', gulp.series('clean', 'copy', 'css', 'images', 'webp', 'html'));
+gulp.task('build', gulp.series('clean', 'copy', 'css', 'webp', 'html')); //, 'images'
 gulp.task('start', gulp.series('build', 'server'));

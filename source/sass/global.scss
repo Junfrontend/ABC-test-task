@@ -2,6 +2,28 @@
 @font-face {
   font-family: "Roboto";
   font-style: normal;
+  font-weight: 300;
+  src: local("Roboto"),
+    /* Если не получилось, загрузит woff2 */
+    url("/fonts/Roboto-Light.woff2") format("woff2"),
+    url("/fonts/Roboto-Light.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"),
+    /* Если не получилось, загрузит woff2 */
+    url("/fonts/Roboto-Regular.woff2") format("woff2"),
+    url("/fonts/Roboto-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: 500;
   src: local("Roboto"),
     /* Если не получилось, загрузит woff2 */
@@ -10,9 +32,20 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "BadScript";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"),
+    /* Если не получилось, загрузит woff2 */
+    url("/fonts/BadScript-Regular.woff2") format("woff2"),
+    url("/fonts/BadScript-Regular.woff") format("woff");
+  font-display: swap;
+}
 
-$font-family: "Roboto", "Arial", sans-serif;
 
+$font-family--Roboto: "Roboto", "Arial", sans-serif;
+$font-family--BadScript: "BadScript", "Arial", sans-serif;
 
 //variables
 $breakpoint-tablet: 768px;
@@ -20,10 +53,9 @@ $breakpoint-desktop: 1024px;
 
 
 //colors
-$color-spindle: #bbc4d6;
-$color-black-pearl: #121920;
-$color-lavender: #ebebf1;
-$color-light-slate-grey: #768298;
+$color-golden-sand: #f6c866;
+$color-default-grey: rgba(255, 255, 255, 0,6);
+$color-white: #ffffff;
 
 //mixins
 @mixin viewport--tablet {
